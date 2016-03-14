@@ -1,20 +1,17 @@
 @import '../bower_components/foundation-sites/scss/util/mixins';
 
-.top-bar {
+.topbar {
+	// height: 10rem;
+	padding: .5rem;
 	width: 100%;
 	list-style: none;
 	background-color: blue !important;
-	// border-width: 2em;
+	// border-width: 2rem;
 	// border-style: solid;
 	// border-color: pink;
-	.logo {
-		margin: auto;
-		width: 4rem;
-	}	
-	ul {
-		vertical-align: center;
-	}
-	.li {
-		list-style: none;
+
+	.columns img {
+		width: 5rem;
 	}
 }
+
