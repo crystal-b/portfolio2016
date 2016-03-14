@@ -1,0 +1,84 @@
+@import '../bower_components/foundation-sites/scss/util/mixins';
+
+$primaryColor: #ee1942;
+$altColorBlue: #21c1f0;
+$altColorOrange: #FFAB0A;
+$bgColor: #ebe8e8;
+$rose: #F7C0C7;
+$seafoam: #B6E0D7;
+$shadow: #8DA5CB;
+
+html {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+body {
+	background-color: $bgColor !important;
+	// border-width: 2em;
+	// border-style: solid;
+	// border-color: $shadow;
+}
+.columns {
+	// border-width: 1em;
+	// border-style: solid;
+	// border-color: $rose;	
+	// margin: 5rem !important;
+}
+.wrapper {
+	position: relative;
+	// border-width: 2em;
+	// border-style: solid;
+	// border-color: $seafoam;
+	// background-color: $altColorBlue;
+
+}
+.grid {
+	background-color: $altColorBlue;
+	height: 20rem;
+	margin: 2rem 0 0 0;
+	padding-top: 1rem;
+	@include breakpoint(medium) {
+		height: 30rem;
+		margin: 2rem 0 2rem 0;
+		padding-top: 2rem;
+	}
+}
+img {
+	width: 100%;
+	@include breakpoint(medium) {
+		width: 100%;
+	}
+}
+.thumb {
+	object-fit: cover;
+	object-position: 0 0;
+	height: 13rem;
+	@include breakpoint(medium) {
+		height: 15rem;
+	}
+}
+.pre {
+	height: 1rem;
+	position: absolute;
+	z-index: 1;
+}
+.preview {
+	//height: 10em;
+	overflow: hidden;
+}
+/*.taping {
+	height: 50px;
+	width: 100%;
+	margin: auto;
+	z-index: 10;
+	position: absolute;
+}
+.tape {
+	background-color: black;
+	display: block;
+	float: left;
+	height: 50px;
+	width: 33.33333%;
+	padding: 0 2em 0 2em;
+}*/
