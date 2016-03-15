@@ -1,13 +1,7 @@
 @import '../bower_components/foundation-sites/scss/util/mixins';
 @import '../bower_components/foundation-sites/scss/grid/grid';
+@import 'mycolor';
 
-$primaryColor: #ee1942;
-$altColorBlue: #21c1f0;
-$altColorOrange: #FFAB0A;
-$bgColor: #ebe8e8;
-$rose: #F7C0C7;
-$seafoam: #B6E0D7;
-$shadow: #8DA5CB;
 
 html {
 	margin: 0;
@@ -20,6 +14,10 @@ body {
 	// border-style: solid;
 	// border-color: $shadow;
 }
+.row {
+	margin: 0;
+	max-width: 100% !important;
+}
 .columns {
 	// border-width: 1em;
 	// border-style: solid;
@@ -28,6 +26,10 @@ body {
 }
 .wrapper {
 	position: relative;
+	margin: 0 .1rem;
+	@include breakpoint(medium) {
+		margin: 0 4rem;
+	}
 	// border-width: 2em;
 	// border-style: solid;
 	// border-color: $seafoam;
@@ -65,6 +67,23 @@ img {
 	padding: 0 1rem;
 	@include breakpoint(medium) {
 		height: 15rem;
+	}
+}
+.description {
+	border-width: 5px;
+	border-style: solid;
+	border-color: $shadow;
+	padding: 1rem;
+	p {
+		font-family: "futura";
+		color: $black;
+
+		.title {
+			font-size: 1.8rem;
+			.lowkey {
+				font-size: .8rem;
+			}
+		}
 	}
 }
 .pre {

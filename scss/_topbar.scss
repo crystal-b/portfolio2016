@@ -1,11 +1,14 @@
 @import '../bower_components/foundation-sites/scss/util/mixins';
+@import '../bower_components/foundation-sites/scss/grid/grid';
+@import 'mycolor';
 
 .topbar {
 	// height: 10rem;
 	padding: .5rem;
 	width: 100%;
 	list-style: none;
-	background-color: blue !important;
+	background-color: $rose;
+	margin: 0;
 	// border-width: 2rem;
 	// border-style: solid;
 	// border-color: pink;
