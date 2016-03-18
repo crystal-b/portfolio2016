@@ -3,6 +3,8 @@
 @import 'mycolor';
 
 
+
+
 html {
 	margin: 0;
 	padding: 0;
@@ -10,9 +12,7 @@ html {
 }
 body {
 	background-color: $bgColor !important;
-	// border-width: 2em;
-	// border-style: solid;
-	// border-color: $shadow;
+	font-family: "Futura" !important;
 }
 .row {
 	margin: 0;
@@ -24,11 +24,46 @@ body {
 	// border-color: $rose;	
 	// margin: 5rem !important;
 }
+.main--greeting {
+	background-color: $headercolor;
+	// background: linear-gradient(to bottom, #333333 0%, #333333 20%, #333333 40%, #333333 60%, #777777 80%, #bbbbbb 98%);
+	color: $white;
+	font-family: "futura";
+	font-size: 1.2rem;
+	height:12rem;
+	width: 100%;
+	margin: 0;
+	padding-top: 3rem;
+	text-align: center;
+	z-index: 2;
+	p {
+		line-height: 1.8rem;
+	}
+	span {
+		font-size: 2.6rem;
+	}
+	@include breakpoint(medium) {
+		font-size: 2rem;
+		font-weight: normal;
+		height:18rem;
+		padding-top: 1rem;
+		p {
+			line-height: 3rem;
+		}
+		span {
+			font-size: 5rem;
+		}
+	}
+}
 .wrapper {
 	position: relative;
 	margin: 0 .1rem;
+	z-index: 2;
 	@include breakpoint(medium) {
 		margin: 0 4rem;
+	}
+	@include breakpoint(large) {
+		margin: 0 8rem;
 	}
 	// border-width: 2em;
 	// border-style: solid;
@@ -43,13 +78,14 @@ body {
 // 	}
 
 // }
-.grid {
-	background-color: $altColorBlue;
+.main--frame {
+	background-color: $white;
 	height: 20rem;
 	margin: 2rem 0 0 0;
 	padding-top: 1rem;
+	position: relative;
 	@include breakpoint(medium) {
-		height: 28rem;
+		height: 27rem;
 		margin: 2rem 0 2rem 0;
 		padding-top: 2rem;
 	}
@@ -60,20 +96,26 @@ img {
 		width: 100%;
 	}
 }
-.thumb {
+.main--frame-thumb {
 	object-fit: cover;
 	object-position: 0 0;
 	height: 13rem;
-	padding: 0 1rem;
+	padding: 0 0rem;
 	@include breakpoint(medium) {
 		height: 15rem;
 	}
 }
-.description {
-	border-width: 5px;
-	border-style: solid;
-	border-color: $shadow;
+.main--frame-title {
+	// border-width: 5px;
+	// border-style: solid;
+	// border-color: $shadow;
+	background-color: $seafoam;
+	height: 4.2rem;
+	width: 15rem;
 	padding: 1rem;
+	position: absolute;
+	bottom: 7.5rem;
+	left: -1rem;
 	p {
 		font-family: "futura";
 		color: $black;
@@ -86,32 +128,20 @@ img {
 		}
 	}
 }
-.pre {
-	height: 1rem;
+.main--frame-description {
+	padding: 1rem;
 	position: absolute;
-	z-index: 1;
+	bottom: .8rem;
+	p {
+		line-height: 1.2rem;
+	}
 }
-.preview {
-	//height: 10em;
-	overflow: hidden;
-}
-
-// $grid-column-gutter: (
-//   small: 100px,
-//   medium: 130px,
-// );
-/*.taping {
-	height: 50px;
-	width: 100%;
-	margin: auto;
-	z-index: 10;
-	position: absolute;
-}
-.tape {
-	background-color: black;
-	display: block;
-	float: left;
-	height: 50px;
-	width: 33.33333%;
-	padding: 0 2em 0 2em;
-}*/
+// .pre {
+// 	height: 1rem;
+// 	position: absolute;
+// 	z-index: 1;
+// }
+// .preview {
+// 	//height: 10em;
+// 	overflow: hidden;
+// }

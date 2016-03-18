@@ -1,0 +1,28 @@
+@import '../bower_components/foundation-sites/scss/util/mixins';
+@import '../bower_components/foundation-sites/scss/grid/grid';
+@import 'mycolor';
+
+.footer {
+	background-color: $deepblack;
+	margin: 0;
+	padding: 0 .5rem;
+	z-index: 2;
+	width: 100%;
+	a {
+		color: $acolor !important;
+	}
+	a:hover {
+		color: $hovercolor !important;
+		border-bottom: 2px solid $hovercolor;
+	}
+	.active {
+		border-bottom: 2px solid $acolor;
+	}
+	.columns img {
+		padding: .3rem 0;
+		width: 2.2rem;
+		@include breakpoint(medium) {
+			width: 3.8rem;
+		}
+	}
+}

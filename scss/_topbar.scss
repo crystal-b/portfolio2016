@@ -3,18 +3,37 @@
 @import 'mycolor';
 
 .topbar {
-	// height: 10rem;
-	padding: .5rem;
-	width: 100%;
-	list-style: none;
-	background-color: $rose;
+	background-color: $headercolor;
 	margin: 0;
-	// border-width: 2rem;
-	// border-style: solid;
-	// border-color: pink;
-
-	.columns img {
-		width: 5rem;
+	padding: 0 .5rem;
+	position: fixed;
+	z-index: 3;
+	width: 100%;
+	a {
+		color: $acolor !important;
+	}
+	a:hover {
+		color: $hovercolor !important;
+		border-bottom: 2px solid $hovercolor;
+	}
+	.logo {	
+		a:hover {
+			border-bottom: none;
+		}
+	}
+	.active {
+		border-bottom: 2px solid $acolor;
+	}
+	.columns {
+		img {
+			padding: .3rem 0;
+			width: 2.2rem;
+			@include breakpoint(medium) {
+				width: 3.8rem;
+			}
+		}
 	}
 }
+
+
 

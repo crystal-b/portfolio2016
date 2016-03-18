@@ -1,0 +1,148 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Crystal Brusch</title>
+    <link rel="stylesheet" href="../css/app.css">
+  </head>
+  <body>
+<!-- NAVIGATION -->
+  <div class="row align-middle topbar">
+      <div class="logo columns align-right small-3 medium-6 large-9">
+        <a href="../index.html"><img src="../img/logo.png" /></a>
+      </div>
+      <div class="columns text-center small-3 medium-2 large-1">
+        <a href="../index.html">Portfolio</a>
+      </div>
+      <div class="columns text-center small-3 medium-2 large-1">
+        <a href="about.html">About</a>
+      </div>
+      <div class="columns text-center small-3 medium-2 large-1">
+        <a href="http://crystaonia.tumblr.com/" target="blank">Blog</a>
+      </div>
+  </div>
+<!-- CONTENT -->
+	<row class="portfolio--header">
+		<img class="portfolio--header-heroimg" src="../img/cooking_shaved-edit.png" />
+		<div class="portfolio--tag-title row align-middle align-right">
+			Cooking with Sound
+		</div>
+	</row>
+  <div class="intro">
+      <p>Design and development for interactive, digital cookbooks<br /><span>Team Members: Chris Mitchell, Fred Chasen</span></p>
+    </div>
+      <div class="wrapper portfolio">
+      	<row class="small-12"><p><span class="portfolio--section">Brief</span><br />For my internship at Hachette Book Group, I designed and developed interactive cookbooks as part of a three-person team. My two main goals for the summer were to 1) create a modular design system for developing future books and 2) improve the reading experience for nonlinear, interactive books. This meant there were two groups of users to design for, the developer and the reader. I worked on four different books. Two of the books had similar structures, the third was an update to an existing book and required very little UX work, but the final book had the most challenging structure so I will mostly focus on it in this case study. Overall, one of the most challenging problem I had to solve was how to deliver a nonlinear, web-like experience when readers are used to a linear, side-scrolling layout.</p></row>
+      	<div class="row align-spaced">
+          <div class="columns large-6">
+            <img class="portfolio--img-diptych" src="../img/cooking_infoarch1.jpg" />
+          </div>
+          <div class="columns large-6">
+            <img class="portfolio--img-diptych" src="../img/cooking_infoarch2.jpg" />
+          </div>
+        </div>
+      	<row class="small-12"><p><span class="portfolio--section">Research</span><br />Most of the user research was performed by my teammember, Fred. We needed to decide early on whether readers would use each book primarily on a phone or a tablet. Fortunately, we were only designing for iOS devices because iBooks offered great support for JavaScript. Unfortunately, we had to specify a single viewport even though the books could be read on phones, tablets or desktops. Fred identified the audience for each of the three books in development and determined that two should be developed for phones rather than tablets. I also interviewed three subjects on their cooking habits and they agreed with Fred's findings. Because I usually design for the smallest screen first anyway, I could move ahead with most of my early sketches. While I did not get to interview actual users, I did write a handful of personas by compiling a number of profiles from the authors' followers on places like Instagram and Twitter.</p></row>
+        <row class="small-12"><img class="portfolio--img" src="../img/cooking_carousel.jpeg" /></row>
+      	<row class="small-12"><p><span class="portfolio--section">Process</span><br />My team used the agile development method so I worked in highly structured design sprints that were tracked with Asana. I depended heavily on card sorting, whiteboard sessions, wireframes, rapid prototyping and A/B tests to explore and iterate on concepts. Chris and I would work closely to flesh out ideas. Next I worked on narrowing down options, first drawing them out on the whiteboard to ensure we were on the same page, then taking the options we selected and paper prototyping them with index cards and post its so I could picture the content and act out the interactions. I moved on to A/B testing with wireframes and clickable prototypes before making a high-fidelity prototypes. For more complicated interactions, I created GIFs for A/B testing. I also worked with a number of new-to-me development tools including Mustache templating, JSON, Grunt, flexbox, Sass, and various CSS architecture methods.</p></row>
+      	<div class="row align-spaced">
+          <div class="columns large-4">
+            <img class="portfolio--img-triptych" src="../img/cooking_postit2.jpg" />
+          </div>
+          <div class="columns large-4">
+            <img class="portfolio--img-triptych" src="../img/cooking_postit3.jpg" />
+          </div>
+          <div class="columns large-4">
+            <img class="portfolio--img-triptych" src="../img/cooking_postit1.jpg" />
+          </div>
+        </div>
+      	<row class="small-12"><p><span class="portfolio--section">Design</span><br />The layouts for the print version of the books were already mostly finished by the time we received the assets for the digital version. Simply copying the layout would not work. Not only was the space markedly reduced, but the interactions we envisioned went beyond the scope of a print book. Some of the features we created allowed readers to filter by ingredient, cook by breaking down recipes into simple steps, and to quickly refer to commonly used components like sauces or learn more about potentially unfamiliar ingredients like chayote.</p>
+        <div class="row align-spaced">
+          <div class="columns large-6">
+            <img class="portfolio--img-diptych-portrait" src="../img/cooking_sketch.jpg" />
+          </div>
+          <div class="columns large-6">
+            <img class="portfolio--img-diptych-portrait" src="../img/cooking_filter.jpg" />
+          </div>
+        </div>
+        <p>We still wanted to retain the ability to "flip" through the book and to let readers simply browse by swiping. The content on each page had to be clear at a glance but also had to drill down and support a lot of information. While I thought that scrollable pages would be the best answer, my early user tests showed that the reaction to scrolling seemed to be divided among users older than or less than thirty years old. On top of that, the vegetable book in this case study did not follow the traditional recipes-with-occassional-essay format of most cookbooks and frequently included extra content, like step-by-step images on how to supreme citrus. I created a few options to address the extra content, like using a lightbox or a slideshow, and though the slideshow worked better in testing, it ended up not working well in developent. Because of the small screen and some iBooks quirks, swiping in the slideshow frequently turned to the next page instead.</p></row>
+        <row class="small-12"><img class="portfolio--img" src="../img/cooking_whiteboard.jpg" /></row>
+      	<row class="small-12"><p><span class="portfolio--section">Prototype</span><br />Before I joined, my team came up with a really clever idea of using audio cues as reminders -- which is the inspiration for my project title. For example, if something needed 20 minutes to marinate the book would let you move on to another part of the recipe that you could do simultaneously. The automatic timer would ring to remind you that the 20 minutes were over and the book would let you continue on with the part of the recipe you had on hold. This is something most people do when cooking, but it was a smart and user-friendly way of guiding people on a digital platform.</p>
+        <div class="row align-spaced">
+          <div class="columns large-6">
+            <img class="portfolio--img-diptych-portrait" src="../img/cooking_sbsanimation2.gif" />
+          </div>
+          <div class="columns large-6">
+            <img class="portfolio--img-diptych-portrait" src="../img/cooking_sbs.png" />
+          </div>
+        </div>
+        <p>Testing early with paper and wireframes in clickable prototypes with Marvel really helped to confirm or obliterate my notions. It also saved a lot of time that I would have spent on high-fidelity designs for ideas that ultimately would not work. One of my major tasks was to find ways to communicate with animation. We envisioned the books performing like an app and less like the mental model most users had about ebooks, so I pushed myself to simplify interactions while also trying to make those interactive options intuitive. Animated transitions to move readers from a recipe landing page to the step-by-step instructions played a big role and we used concepts from material design as a starting point. </p></row>
+      	<div class="row align-spaced">
+          <div class="columns small-10 large-4">
+            <img class="portfolio--img-triptych" src="../img/cooking_animation-elastic.gif" />
+          </div>
+          <div class="columns small-12 large-4">
+            <img class="portfolio--img-triptych" src="../img/cooking_animation-phone.gif" />
+          </div>
+          <div class="columns small-10 large-4">
+            <img class="portfolio--img-triptych" src="../img/cooking_animation-lid.gif" />
+          </div>
+        </div>
+      	<row class="small-12"><p><span class="portfolio--section">Insights</span><br />Not all of my ideas were implemented, but the process did help me to focus on a few key interactions. Scrolling was necessary in a few places and common design patterns, like cutting off content to indicate the need to scroll, were good solutions. Creating a unified design system, like using specific colors for each section of the book then using complementary colors for that sections step-by-step recipes, also really helped to give readers a sense of place and to let them know where to scroll down for continued content and where to swipe for new steps or recipes. One significant thing that I would do differently would be to stick to a single method for CSS architecture. While I liked the naming conventions in BEM and the orginazation of components in SMACSS, combining the two became overly complicated and will likely be difficult for future developers to understand.</p><p>Click on an image below to try out each prototype, though the best experience is on mobile. You can also preview the completed books in the iTunes store.<br />
+        <div class="row align-spaced">
+          <div class="columns small-6 large-3">
+            <a href="https://itunes.apple.com/us/book/america-farm-to-table/id918648843?mt=11" target="blank"><img class="portfolio--img-diptych" src="../img/cooking_book1.jpg" /></a>
+          </div>
+          <div class="columns small-6 large-3">
+            <a href="https://itunes.apple.com/us/book/asian-american/id1029519415?mt=11" target="blank"><img class="portfolio--img-diptych" src="../img/cooking_book2.jpg" /></a>
+          </div>
+          <div class="columns small-6 large-3">
+            <a href="https://itunes.apple.com/us/book/fast-food-good-food/id1043166068?mt=11" target="blank"><img class="portfolio--img-diptych" src="../img/cooking_book3.jpg" /></a>
+          </div>
+          <div class="columns small-6 large-3">
+            <a href="https://itunes.apple.com/us/book/v-is-for-vegetables/id1029514766?mt=11" target="blank"><img class="portfolio--img-diptych" src="../img/cooking_book4.jpg" /></a>
+          </div>
+        </div>
+      </div> 
+        <div class="row align-spaced">
+          <div class="columns small-6 large-3">
+            <a href="https://marvelapp.com/10f6g79" target="blank"><img class="portfolio--img-diptych" src="../img/cooking_lowa.png" /></a>
+          </div>
+          <div class="columns small-6 large-3">
+            <a href="https://marvelapp.com/21fcfi6" target="blank"><img class="portfolio--img-diptych" src="../img/cooking_lowb.png" /></a>
+          </div>
+          <div class="columns small-6 large-3">
+            <a href="https://marvelapp.com/e070de" target="blank"><img class="portfolio--img-diptych" src="../img/cooking_hia.png" /></a>
+          </div>
+          <div class="columns small-6 large-3">
+            <a href="https://marvelapp.com/ecibb4" target="blank"><img class="portfolio--img-diptych" src="../img/cooking_hib.png" /></a>
+          </div>
+        </div>
+      </div>
+<!-- FOOTER -->
+    <div class="next row align-middle">
+        <div class="columns align-left large-8">Next Project</div>
+        <div class="columns align-right large-4">Name of Project</div>
+    </div>
+<div class="row align-middle footer">
+<!--       <div class="columns align-right small-4 medium-3 large-9">
+        <a href="index.html"><img src="img/logo.png" /></a> Copyright 2016
+      </div> -->
+      <div class="columns align-right text-center small-4 large-1">
+        <a href="https://twitter.com/crystalbrusch" target="blank">Twitter</a>
+      </div>
+      <div class="columns align-right text-center small-4 large-1">
+        <a href="https://www.instagram.com/crystalbe/" target="blank">Instagram</a>
+      </div>
+      <div class="columns align-right text-center small-4 large-1">
+        <a href="https://www.linkedin.com/in/crystalbrusch" target="blank">LinkedIn</a>
+      </div>
+  </div>
+<!-- SCRIPTS -->
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/what-input/what-input.js"></script>
+    <script src="../bower_components/foundation-sites/dist/foundation.js"></script>
+    <script src="../js/app.js"></script>
+  </body>
+</html>

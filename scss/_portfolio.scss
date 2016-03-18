@@ -8,25 +8,60 @@
 		object-fit: cover;
 		object-position: 0 0;
 		height: 15rem;
-		margin-bottom: 3rem;
 		@include breakpoint(medium) {
 			height: 30rem;
 		}
 	}
 	.portfolio--tag-title {
-		background-color: $shadow;
+		background-color: $seafoam;
 		font-size: 1.2rem;
 		font-weight: bold;
 		height: 3rem;
 		width: 17rem;
 		padding-right: 2rem;
 		position: absolute;
-		bottom: -7rem;
+		bottom: -9rem;
 		@include breakpoint(medium) {
 			font-size: 2.2rem;
 			height: 5rem;
-			width: 40rem;
-			bottom: -8rem;
+			width: 30rem;
+			bottom: -17rem;
+		}
+		@include breakpoint(large) {
+			font-size: 2.2rem;
+			height: 5rem;
+			width: 50rem;
+			bottom: -17rem;
+		}
+	}
+}
+.intro {
+	background-color: $black !important;
+	color: $white;
+	height: 11rem;
+	width: 100%;
+	font-family: "Garamond";
+	font-size: 1.1rem;
+	font-weight: bold;
+	text-align: center;
+	p {
+		padding: 3rem 1.2rem;
+		span {
+			font-size: .8rem;
+			font-weight: normal;
+		}
+	}
+	@include breakpoint(large) {
+		font-size: 2rem;
+		font-weight: normal;
+		height: 20rem;
+		line-height: 1rem;
+		margin-bottom: 5rem;
+		p {
+			padding: 7rem 9em 0 9em;
+			span {
+				font-size: 1.2rem;
+			}
 		}
 	}
 }
@@ -34,25 +69,67 @@
 
 
 .portfolio {
+	.portfolio--section {
+		color: $shadow;
+		font-size: 1.6rem;
+		font-weight: bold;
+		margin: 0;
+	}
 	p {
 		font-family: "helvetica";
 		padding: 0 1rem;
 		@include breakpoint(medium) {
+			padding: 0;
+		}
+		@include breakpoint(large) {
 			padding: 1rem 10rem;
-		}	
+		}
 	}
 	.portfolio--img {
 		object-fit: cover;
 		object-position: 0 0;
 		margin: 1rem 0;
 		padding: 2rem 0;
-		@include breakpoint(medium) {
+		@include breakpoint(large) {
 			margin: 4rem 0;
 			padding: 0 10rem;
 		}
 	}
+	.portfolio--img-portrait {
+		@extend .portfolio--img;
+		@include breakpoint(large) {
+			margin: 4rem 0;
+			padding: 0 20rem;
+		}
+	}
+	.portfolio--img-diptych {
+		@extend .portfolio--img;
+		@include breakpoint(large) {
+			margin: 4rem 0;
+			padding: 0;
+		}
+	}
+	.portfolio--img-diptych-portrait {
+		@extend .portfolio--img-diptych;
+		@include breakpoint(large) {
+			margin: 4rem 0;
+			padding: 0 5rem;
+		}
+	}
+	.portfolio--img-triptych {
+		@extend .portfolio--img-diptych;
+	}
 	.portfolio--tag-caption {
 
 	}
+}
+.portrait {
+	height: 50rem;
+}
+.next {
+	background-image: url('../img/cityscents_sketch1.jpg');
+	background-position: 0 0;
+	height: 10rem;
+	width: 100%;
 }
 
