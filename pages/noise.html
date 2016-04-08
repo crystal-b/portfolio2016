@@ -11,7 +11,7 @@
 <!-- NAVIGATION -->
     <div class="row align-middle topbar">
       <div class="logo columns align-right small-3 medium-6 large-9">
-        <a href="../index.html"><img src="../img/logo.png" /></a>
+        <a href="../index.html"><img src="../img/logo2.png" /></a>
       </div>
       <div class="columns text-center small-3 medium-2 large-1">
         <a href="../index.html">Portfolio</a>
@@ -24,37 +24,86 @@
       </div>
     </div>
 <!-- CONTENT -->
-  	<row class="portfolio--header">
-  		<img class="portfolio--header-heroimg" src="../img/noise_board.jpg" />
-  		<div class="portfolio--tag-title row align-middle align-right">
-  			Noise City
-  		</div>
-  	</row>
-    <div class="intro">
-      <p>An instrument that lets you explore and layer the sounds of Manhattan. Inspired by John Zorn's Naked City.</p>
+    <div id="noise">
+    	<row class="portfolio--header">
+    		<img class="portfolio--header-heroimg" src="../img/noise_board.jpg" />
+    		<div class="portfolio--tag-title row align-middle align-right">
+    			Noise City
+    		</div>
+    	</row>
+      <div class="intro">
+        <p>An instrument that lets you explore and layer the sounds of Manhattan. Inspired by John Zorn's Naked City.</p>
+      </div>
+      <div class="wrapper portfolio">
+      	<row class="small-12"><p><span class="portfolio--section">Brief</span><br />Noise is a part of city life. It is both a nuisance and a comfort. But, as major cities shift from slums to luxury playgrounds, a battle against noise is underway. In a recent lawsuit brought by a West Village resident against a bar/restaurant that is 80+ years old, the judge ruled in the bar’s favor. The judge’s argument stated, “In the modern world, some degree of noise, tension and discomfort is the inevitable concomitant of ­urban life.” I would like to highlight noise and let people experience the chaotic joy of many things producing sound by crashing into one another.</p></row>
+      	<row class="small-12"><img class="portfolio--img-portrait" src="../img/noise_sketch1.jpg" /></row>
+    	  <row class="small-12"><p><span class="portfolio--section">Process</span>This was a rare project where I could create anything that I wanted to exist. Still, I did a bit of research on the joyful effects of noise, like this <a href="http://clogic.eserver.org/4-2/smith.html" target="blank">essay on Adorno and Japanese noise musicians</a>. Most of my initial feedback did not enjoy noise for noise's sake, so I tried to find ways to give the sounds more context. <a href="http://vectorsdev.usc.edu/NYCsound/777b.html" target="blank">The Roaring 20s project</a> was a huge influence and I even borrowed sounds from their archive. I also wanted some present-day sounds so I spent a few weeks hunting for New York noises like subway cars closing, sewers bubbling, and the metallic buzzing from final construction on the Oculus structure at the World Trade Center station.</p></row>
+        <row class="small-12"><img class="portfolio--img-portrait" src="../img/noise_workflow.jpg" /></row>
+        <row class="small-12"><p><span class="portfolio--section">Prototype</span><br />I was set on using strings because they would reference the streets of Manhattan as well as an instrument. The best looking solution, a stretch sensor, would not work because I wanted streets to be able to have different sounds at intersections with multiple avenues. On my teacher's advice, I tried breaking open the housing of a piezo sensor to make it more sensitive. The thinking was that vibration from a string would activate the sensor if the activation point was nearby. But, the piezo needed a mechanical vibration -- the string needed to touch the sensor to activate it. A classmate suggested I try using light sensors to fake an interaction instead. My preliminary prototype was just holes drilled into the lid of a box that housed my arduino. I taped the light sensors to the underside of the holes and strung rubber bands over the holes on the top of the lid. Finally, I had the plucking interaction I always wanted.</p></row>
+        <div class="row align-spaced">
+          <div class="columns small-12 large-6">
+            <img class="portfolio--img-diptych portfolio--img-portrait" src="../img/noise_piezo.jpg" />
+          </div>
+          <div class="columns small-12 large-6">
+            <img class="portfolio--img-diptych portfolio--img-portrait" src="../img/noise_sensor.jpg" />
+          </div>
+        </div>
+      	<row class="small-12"><p><span class="portfolio--section">Testing</span><br />Users seemed to enjoy navigating the soundscape of New York with my preliminary prototype and I also received some great feedback. One user noticed that I barely had any human voices. Another thought the project could have a number of other applications, like exploring the history of recordings from the city's jazz bars. I mainly iterated on the visual component by gauging users' levels of interest and distraction. The user interface started as still images of locations overlaid with frequency waves, but people found it to cluttered and distracting. I changed the visual feedback to a simple map of Manhattan that highlighted the active spots when the corresponding noise played and that worked really well. I also explored using video, but the map had the best reaction and seemed to keep people focused on the sound and the instrument.</p></row>
+      	<row class="small-12"><img class="portfolio--img" src="../img/noise_wires.jpg" /></row>
+      	<row class="small-12"><p><span class="portfolio--section">Insights</span><br />There were some minor setbacks like Minim, an audio library for Processing, not working with my .mp4 files and having to edit the metadata in those files to get them to play. This project was mostly a total pleasure to work on though. Recording audio clips and user testing were my favorite parts because I got to explore the city and learned a lot about my own mental gaps, like not thinking of human voices as noise. The final prototype also had a number of complications that I would need to resolve in an updated version. One is that I drilled the holes for the light sensors from the face of the board so I could ensure the right locations were on the map. However, the holes were bigger on the face than on the underside where the sensors were attached and too much light would get through. I tried to resolve this by twisting two pairs of strings to cover more of the holes, but the result looked shoddy. I would also like to have moved the visual feedback from the screen-based map to the board itself.</p></row>  
+      	<row class="small-12"><img class="portfolio--img-portrait" src="../img/noise_board.jpg" /></row>
+      </div>
+<!-- BOTTOM NAV -->
+<!--       <div class="next row align-middle">
+        <div class="next--wrapper columns small-6 align-left">
+          <div class="next--project-left columns small-12 medium-12 large-6">
+            <a href="#"><div class="next--title-left"><p>Last Project</p></div></a>
+          </div>
+        </div>
+        <div class="next--wrapper columns small-6 align-right">
+          <div class="next--project-right columns small-12 medium-12 large-6">
+            <a href="#"><div class="next--title-right"><p>Next Project</p></div></a>
+          </div>
+        </div>
+      </div> -->
+      <div class="next row align-justify">
+          <div class="next--project-left columns small-5 medium-4 large-2">
+            <a href="#"><div class="next--title-left"><p>Last Project</p></div></a>
+          </div>
+          <div class="next--project-right columns small-5 medium-4 large-2">
+            <a href="#"><div class="next--title-right"><p>Next Project</p></div></a>
+          </div>
+      </div>
+    </div> <!-- end project -->
+  <!-- FOOTER -->
+    <div class="row align-middle footer">
+      <div class="columns align-right text-center small-3 large-1">
+        <a href="https://twitter.com/crystalbrusch" target="blank">Twitter</a>
+      </div>
+      <div class="columns align-right text-center small-3 large-1">
+        <a href="https://github.com/crystal-b" target="blank">Github</a>
+      </div>
+      <div class="columns align-right text-center small-3 large-1">
+        <a href="https://www.instagram.com/crystalbe/" target="blank">Instagram</a>
+      </div>
+      <div class="columns align-right text-center small-3 large-1">
+        <a href="https://www.linkedin.com/in/crystalbrusch" target="blank">LinkedIn</a>
+      </div>
     </div>
-    <div class="wrapper portfolio">
-    	<row class="small-12"><p><span class="portfolio--section">Brief</span><br />Noise is a part of city life. It is both a nuisance and a comfort. But, as major cities shift from slums to luxury playgrounds, a battle against noise is underway. In a recent lawsuit brought by a West Village resident against a bar/restaurant that is 80+ years old, the judge ruled in the bar’s favor. The judge’s argument stated, “In the modern world, some degree of noise, tension and discomfort is the inevitable concomitant of ­urban life.” I would like to highlight noise and let people experience the chaotic joy of many things producing sound by crashing into one another.</p></row>
-    	<row class="small-12"><img class="portfolio--img-portrait" src="../img/noise_sketch1.jpg" /></row>
-    	<row class="small-12"><p><span class="portfolio--section">Process</span></p></row>
-    	<row class="small-12"><img class="portfolio--img-portrait" src="../img/noise_workflow.jpg" /></row>
-    	<row class="small-12"><p><span class="portfolio--section">Design</span><br /></p></row>
-    	<row class="small-12"><img class="portfolio--img-portrait" src="../img/noise_piezo.jpg" /></row>
-    	<row class="small-12"><p><span class="portfolio--section">Fabrication</span><br />I was set on using strings because they would reference the streets of Manhattan as well as an instrument. The best looking solution, a stretch sensor, would not work because I wanted streets to be able to have different sounds at intersections with multiple avenues. Next, I tried breaking open the housing of a piezo sensor to make it more sensitive. The thinking was that vibration from a string would activate the sensor if the activation point was nearby. But, the piezo needed a mechanical vibration -- the string needed to touch the sensor to activate it.</p></row>
-    	<row class="small-12"><img class="portfolio--img-portrait" src="../img/noise_sensor.jpg" /></row>
-    	<row class="small-12"><p><span class="portfolio--section">Testing</span><br /></p></row>
-    	<row class="small-12"><img class="portfolio--img" src="../img/noise_wires.jpg" /></row>
-    	<row class="small-12"><p><span class="portfolio--section">Insights</span><br /></p></row>  
-    	<row class="small-12"><img class="portfolio--img-portrait" src="../img/noise_board.jpg" /></row>
-    </div>
-    <div class="next row align-middle">
-        <div class="columns align-left large-8">Next Project</div>
-        <div class="columns align-right large-4">Name of Project</div>
-    </div>
-<!-- SCRIPTS -->
+  <!-- SCRIPTS -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/what-input/what-input.js"></script>
     <script src="../bower_components/foundation-sites/dist/foundation.js"></script>
     <script src="../js/app.js"></script>
+    <script src="../js/sketch.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-76063009-1', 'auto');
+      ga('send', 'pageview');
+    </script>
   </body>
 </html>

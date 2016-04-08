@@ -1,0 +1,80 @@
+@import '../bower_components/foundation-sites/scss/util/mixins';
+@import '../bower_components/foundation-sites/scss/grid/grid';
+@import 'mycolor';
+
+@mixin next--project() {
+	background-image: none;
+
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 1rem;
+	width: 100%;
+	opacity: 1;
+	position: relative;
+	@include breakpoint(medium) {
+		background-image: url('../img/cityscents_sketch1.jpg');
+		height: 11rem;
+		opacity: 0.7;
+	}
+}
+@mixin next--project-title() {
+	background-color: $seafoam;
+	height: 3.8rem;
+	width: 100%;
+	padding: 1rem;
+	position: absolute;
+	bottom: 0;	
+	@include breakpoint(medium) {
+		height: 4.2rem;
+		width: 12rem;
+		bottom: 3.5rem;
+	}
+}
+
+
+
+.next {
+	background-color: $bgColor;
+	margin-top: 6rem
+	p {
+		font-family: "futura";
+		color: $black;
+	}
+	a {
+		color: $deepblack;	
+	}
+	a:hover {
+		color: $black;	
+	}
+	@include breakpoint(medium) {
+		margin-top: 10rem;	
+	}
+	.next--project-right {
+		@include next--project;
+		.next--title-right {
+			@include next--project-title;
+			left: 0;
+			text-align: right;
+			@include breakpoint(medium) {
+				left: -2rem;
+			}
+		}
+	}	
+	.next--project-right:hover {
+		opacity: 1;
+	}
+	.next--project-left {
+		@include next--project;
+		.next--title-left {
+			@include next--project-title;
+			right: 0;
+			@include breakpoint(medium) {
+				right: -2rem;
+			}
+		}
+	}
+	.next--project-left:hover {
+		opacity: 1;
+	}
+}	

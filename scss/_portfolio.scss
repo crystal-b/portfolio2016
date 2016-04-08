@@ -1,7 +1,7 @@
 @import '../bower_components/foundation-sites/scss/util/mixins';
 @import '../bower_components/foundation-sites/scss/grid/grid';
 @import 'mycolor';
-
+ 
 .portfolio--header {
 	position: relative;
 	.portfolio--header-heroimg {
@@ -126,10 +126,5 @@
 .portrait {
 	height: 50rem;
 }
-.next {
-	background-image: url('../img/cityscents_sketch1.jpg');
-	background-position: 0 0;
-	height: 10rem;
-	width: 100%;
-}
+
 

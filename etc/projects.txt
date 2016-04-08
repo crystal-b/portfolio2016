@@ -1,6 +1,6 @@
 projects.txt
 
-Cooking with Noise
+Cooking with Sound
 Intro: A series of interactive, digital cookbooks designed and developed during my internship at Hachette Book Group.
 Team Members: Chris Mitchell + Fred Chasen
 BRIEF:
@@ -16,7 +16,7 @@ We still wanted to retain the ability to "flip" through the book and to let read
 
 PROTOTYPE: Before I joined, my team came up with a really clever idea of using audio cues as reminders -- which is the inspiration for my project title. For example, if something needed 20 minutes to marinate the book would let you move on to another part of the recipe that you could do simultaneously. The automatic timer would ring to remind you that the 20 minutes were over and the book would let you continue on with the part of the recipe you had on hold. This is something most people do when cooking, but it was a smart and user-friendly way of guiding people on a digital platform.
 
-Testing early with paper and A/B testing wireframes in clickable prototypes with Marvel really helped to confirm or obliterate my notions. It also saved a lot of time that I would have spent on high-fidelity designs for ideas that ultimately would not work. One of my major tasks was to find ways to communicate with animation. We envisioned the books performing like an app and less like the mental model most users had about ebooks, so I pushed myself to simplify interactions while also trying to make those interactive options intuitive. Animated transitions to move readers from a recipe landing page to the step-by-step instructions played a big role and we used concepts from material design as a starting point. 
+Testing early with paper and wireframes in clickable prototypes with Marvel really helped to confirm or obliterate my notions. It also saved a lot of time that I would have spent on high-fidelity designs for ideas that ultimately would not work. One of my major tasks was to find ways to communicate with animation. We envisioned the books performing like an app and less like the mental model most users had about ebooks, so I pushed myself to simplify interactions while also trying to make those interactive options intuitive. Animated transitions to move readers from a recipe landing page to the step-by-step instructions played a big role and we used concepts from material design as a starting point. 
 
 INSIGHTS: Not all of my ideas were implemented, but the process did help me to focus on a few key interactions. Scrolling was necessary in a few places and common design patterns, like cutting off content to indicate the need to scroll, were good solutions. Creating a unified design system, like using specific colors for each section of the book then using complementary colors for that sections step-by-step recipes, also really helped to give readers a sense of place and to let them know where to scroll down for continued content and where to swipe for new steps or recipes. One significant thing that I would do differently would be to stick to a single method for CSS architecture. While I liked the naming conventions in BEM and the orginazation of components in SMACSS, combining the two became overly complicated and will likely be difficult for future developers to understand.
 
@@ -35,15 +35,14 @@ The content on each page had to be clear at a glance but also had to drill down 
 I pushed myself to simplify interactions while also trying to make those interactive options intuitive
 
 
+
 Noise City
 INTRO: An instrument that lets you explore and layer the sounds of Manhattan. Inspired by John Zorn's Naked City.
-BRIEF:
-PROCESS:
-RESEARCH: While checking out the websites of watch and clockmakers, I noticed a pattern where luxury retailers would place their products against black or dark backgrounds for dramatic effect. This really higlighted the rich metal and leather materials of the pieces. The designer(s) may or may not have had a muse in mind when making a timepiece, but by the time the product makes its way to a copywriter or web designer, that information is usually long gone. It's a pity because while customers expect information like images, price and product specifications, they also tend to appreciate a story. It is not practical to do that for every product, but for mid-priced luxury items like these it feels like a wasted opportunity to not create some kind of narrative.
-DESIGN: 
-PROTOTYPE:
-TESTING:
-INSIGHTS:
+BRIEF: Noise is a part of city life. It is both a nuisance and a comfort. But, as major cities shift from slums to luxury playgrounds, a battle against noise is underway. In a recent lawsuit brought by a West Village resident against a bar/restaurant that is 80+ years old, the judge ruled in the bar’s favor. The judge’s argument stated, “In the modern world, some degree of noise, tension and discomfort is the inevitable concomitant of ­urban life.” I would like to highlight noise and let people experience the chaotic joy of many things producing sound by crashing into one another.
+PROCESS: This was a rare project where I could create anything that I wanted to exist. Still, I did a bit of research on the joyful effects of noise, like this <a href="http://clogic.eserver.org/4-2/smith.html" target="blank">essay on Adorno and Japanese noise musicians</a>. Most of my initial feedback did not enjoy noise for noise's sake, so I tried to find ways to give the sounds more context. <a href="http://vectorsdev.usc.edu/NYCsound/777b.html" target="blank">The Roaring 20s project</a> was a huge influence and I even borrowed sounds from their archive. I also wanted some present-day sounds so I spent a few weeks hunting for New York noises like subway cars closing, sewers bubbling, and the metallic buzzing from final construction on the Oculus structure at the World Trade Center station.
+PROTOTYPE: I was set on using strings because they would reference the streets of Manhattan as well as an instrument. The best looking solution, a stretch sensor, would not work because I wanted streets to be able to have different sounds at intersections with multiple avenues. On my teacher's advice, I tried breaking open the housing of a piezo sensor to make it more sensitive. The thinking was that vibration from a string would activate the sensor if the activation point was nearby. But, the piezo needed a mechanical vibration -- the string needed to touch the sensor to activate it. A classmate suggested I try using light sensors to fake an interaction instead. My preliminary prototype was just holes drilled into the lid of a box that housed my arduino. I taped the light sensors to the underside of the holes and strung rubber bands over the holes on the top of the lid. Finally, I had the plucking interaction I always wanted.
+TESTING: Users seemed to enjoy navigating the soundscape of New York with my preliminary prototype and I also received some great feedback. One user noticed that I barely had any human voices. Another thought the project could have a number of other applications, like exploring the history of recordings from the city's jazz bars. I mainly iterated on the visual component by gauging users' levels of interest and distraction. The user interface started as still images of locations overlaid with frequency waves, but people found it to cluttered and distracting. I changed the visual feedback to a simple map of Manhattan that highlighted the active spots when the corresponding noise played and that worked really well. I also explored using video, but the map had the best reaction and seemed to keep people focused on the sound and the instrument.
+INSIGHTS: There were some minor setbacks like Minim, an audio library for Processing, not working with my .mp4 files and having to edit the metadata in those files to get them to play. This project was mostly a total pleasure to work on though. Recording audio clips and user testing were my favorite parts because I got to explore the city and learned a lot about my own mental gaps, like not thinking of human voices as noise. The final prototype also had a number of complications that I would need to resolve in an updated version. One is that I drilled the holes for the light sensors from the face of the board so I could ensure the right locations were on the map. However, the holes were bigger on the face than on the underside where the sensors were attached and too much light would get through. I tried to resolve this by twisting two pairs of strings to cover more of the holes, but the result looked shoddy. I would also like to have moved the visual feedback from the screen-based map to the board itself.
 
 Klotz Clocks
 BRIEF:
@@ -53,3 +52,11 @@ DESIGN:
 PROTOTYPE:
 TESTING:
 INSIGHTS:
+
+
+
+Crystal Brusch is a graduate student at NYU's Interactive Telecommunications Program, where she likes to mess with code. Her projects involve user experience, data visualization, animation, social justice and playing with concepts of digital narratives.
+
+One day Crystal will figure out how to attach her mixte and tent to her scooter and go beach-hopping up the east coast. Until then, the MTA will do.
+
+Thanks to AV for this lovely picture of me

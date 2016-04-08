@@ -4,8 +4,9 @@
 
 .footer {
 	background-color: $deepblack;
+	font-size: .8rem;
 	margin: 0;
-	padding: 0 .5rem;
+	padding: 1rem .5rem;
 	z-index: 2;
 	width: 100%;
 	a {
@@ -24,5 +25,9 @@
 		@include breakpoint(medium) {
 			width: 3.8rem;
 		}
+	}
+	@include breakpoint(medium) {
+		font-size: 1rem;
+		padding: 5rem 1rem;
 	}
 }
