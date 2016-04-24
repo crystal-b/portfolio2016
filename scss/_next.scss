@@ -1,13 +1,14 @@
 @import '../bower_components/foundation-sites/scss/util/mixins';
 @import '../bower_components/foundation-sites/scss/grid/grid';
 @import 'mycolor';
+@import 'mixins';
 
 @mixin next--project() {
 	background-image: none;
-
 	background-position: 0 0;
 	background-repeat: no-repeat;
 	background-size: cover;
+	font-family: Futura, Helvetica, "Franklin Gothic Medium", sans-serif;
 	height: 1rem;
 	width: 100%;
 	opacity: 1;
@@ -25,10 +26,17 @@
 	padding: 1rem;
 	position: absolute;
 	bottom: 0;	
+	p {
+		font-size: .9rem;
+		line-height: 1.6rem;
+	}
 	@include breakpoint(medium) {
 		height: 4.2rem;
 		width: 12rem;
 		bottom: 3.5rem;
+		p {
+			line-height: 2rem;
+		}
 	}
 }
 
@@ -51,8 +59,10 @@
 		margin-top: 10rem;	
 	}
 	.next--project-right {
+		// border: 1px solid red;
 		@include next--project;
 		.next--title-right {
+			// border: 1px solid green;
 			@include next--project-title;
 			left: 0;
 			text-align: right;
@@ -63,6 +73,16 @@
 	}	
 	.next--project-right:hover {
 		opacity: 1;
+	}
+	.next--right-tiny {
+		@include tiny-intro;
+		p {
+			font-size: 10rem;
+			line-height: 10rem;
+		}
+		@include breakpoint(medium) {
+
+		}
 	}
 	.next--project-left {
 		@include next--project;

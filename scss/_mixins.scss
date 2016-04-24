@@ -1,0 +1,8 @@
+/* Mixins only. Do not include in app.scss */
+
+@mixin tiny-intro() {
+	background-color: $rose !important;
+	color: $white;
+	font-family: Futura;
+	text-align: center;
+}

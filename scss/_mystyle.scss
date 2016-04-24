@@ -1,6 +1,7 @@
 @import '../bower_components/foundation-sites/scss/util/mixins';
 @import '../bower_components/foundation-sites/scss/grid/grid';
 @import 'mycolor';
+@import 'mixins';
 
 
 
@@ -89,6 +90,12 @@ body {
 		margin: 2rem 0 2rem 0;
 		padding-top: 2rem;
 	}
+	a {
+		color: $deepblack;	
+	}
+	a:hover {
+		color: $black;	
+	}
 }
 img {
 	width: 100%;
@@ -105,43 +112,58 @@ img {
 		height: 15rem;
 	}
 }
+.main--thumb-tiny {
+	@include tiny-intro;
+	p {
+		font-size: 7rem;
+	}
+	@include breakpoint(medium) {
+		height: 15rem;
+		p {
+			font-size: 9rem;
+		}
+	}
+}
 .main--frame-title {
-	// border-width: 5px;
-	// border-style: solid;
-	// border-color: $shadow;
 	background-color: $seafoam;
 	height: 4.2rem;
 	width: 15rem;
 	padding: 1rem;
 	position: absolute;
-	bottom: 7.5rem;
+	bottom: 6rem;
 	left: -1rem;
 	p {
 		font-family: "futura";
+		font-size: 1.2rem;
 		color: $black;
 
-		.title {
-			font-size: 1.8rem;
-			.lowkey {
-				font-size: .8rem;
-			}
-		}
+		// .title {
+		// 	font-size: 1.8rem;
+		// 	font-weight: heavy;
+		// 	.lowkey {
+		// 		font-size: .8rem;
+		// 	}
+		// }
+	}
+	@include breakpoint(medium) {
+		bottom: 7.5rem;
 	}
 }
 .main--frame-description {
 	padding: 1rem;
 	position: absolute;
-	bottom: .8rem;
+	bottom: .2rem;
 	p {
 		line-height: 1.2rem;
 	}
+	@include breakpoint(medium) {
+		bottom: 1.2rem;
+	}
 }
-// .pre {
-// 	height: 1rem;
-// 	position: absolute;
-// 	z-index: 1;
-// }
-// .preview {
-// 	//height: 10em;
-// 	overflow: hidden;
-// }
+
+
+
+
+
+
+

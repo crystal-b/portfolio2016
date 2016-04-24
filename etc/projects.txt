@@ -1,8 +1,43 @@
 projects.txt
 
+WALS Map
+Intro: A geographic data visualization of linguistic structures
+Roles:
+Me: User Research, User Testing, Development (d3.js), Writing, Competitive Analysis
+Sakshi Katiyar: User Research, User Testing, Development (Tableau), Writing
+
+Brief: For my Information Visualization class, my partner and I mapped data from the World Atlas of Language Structures. Our end users were computational linguistics scholars so we interviewed Lucas, a linguist and professor, and used him as our muse. He specializes in formal semantics -- finding meaning through the formal constructions of a natural language. We tried several visualizations and found that using spatial data was best for showing relationships through clustering. Some of the most interesting results were the outliers. Most of the data points clustered along the equator, but some categories had oddly disparate clusters. You can take a look at our final map and view the white paper.
+
+Problem: Lucas wanted to easily identify correlations in linguistic features, like vowel quality and tone, especially among languages that do not have a shared history. He wanted to prove those connections through computation, but creating algorithms for that was beyond the scope of the project. Instead, we visualized connections as a way to support any findings from his mathematical computations. There are hundreds of structural attributes in thousands of languages so we also needed to understand linguistics enough to figure out what information was most important for the project.
+
+Solution: We tested our ideas by limiting our visualization to one category, Phonology, to see what cultural aspects they may reveal. We made rough sketches for various representations like a node-based web and a heat map. Sakshi experimented with bar charts and maps in Tableau, and the maps received the best response in testing. I then created a single map with d3 because a web-based visualization was more portable and usable. I added an interface to select various attributes and toggle values to change the data displayed on the map. Overlapping points were also a problem, so I tested sizes and settled on one that is readable at a distance but not so large that it obscures information when a user zooms in. I chose colors for the attribute values so they would look harmonious but also distinct enough to tell which values were currently toggled on and displayed on the map. 
+
+ 
+
+
 Cooking with Sound
 Intro: A series of interactive, digital cookbooks designed and developed during my internship at Hachette Book Group.
 Team Members: Chris Mitchell + Fred Chasen
+
+/* Roles */
+Me: User Experience Design, Prototyping, Motion Design (After Effects, CSS, jQuery), Development (SASS/CSS, JSON, Mustache), Usability Testing
+Chris Mitchell: Development (JavaScript/jQuery, Handlebar, Mustache)
+Fred Chasen: User Research, User Testing, Project Manager
+
+/* Summary */
+Brief: I designed and developed interactive cookbooks for my internship with Hachette Book Group. We took advantage of the nonlinear capabilities of digital text to improve discoverability without disturbing the reading experience.
+Research:  
+Problem 1: All of the books' assets were designed for print and the layouts needed an overhaul to work on mobile. 
+Solution: UX!
+
+Problem 2: Flipping vs. scrolling
+Solution: UX!
+
+Insights: 
+
+
+
+
 BRIEF:
 For my internship at Hachette Book Group, I designed and developed interactive cookbooks as part of a three-person team. My two main goals for the summer were to 1) create a modular design system for developing future books and 2) improve the reading experience for nonlinear, interactive books. This meant there were two groups of users to design for, the developer and the reader. I worked on four different books. Two of the books had similar structures, the third was an update to an existing book and required very little UX work, but the final book had the most challenging structure so I will mostly focus on it in this case study. Overall, one of the most challenging problem I had to solve was how to deliver a nonlinear, web-like experience when readers are used to a linear, side-scrolling layout.
 
@@ -37,7 +72,7 @@ I pushed myself to simplify interactions while also trying to make those interac
 
 
 Noise City
-INTRO: An instrument that lets you explore and layer the sounds of Manhattan. Inspired by John Zorn's Naked City.
+BRIEF: An instrument that lets you explore and layer the sounds of Manhattan. Inspired by John Zorn's Naked City.
 BRIEF: Noise is a part of city life. It is both a nuisance and a comfort. But, as major cities shift from slums to luxury playgrounds, a battle against noise is underway. In a recent lawsuit brought by a West Village resident against a bar/restaurant that is 80+ years old, the judge ruled in the bar’s favor. The judge’s argument stated, “In the modern world, some degree of noise, tension and discomfort is the inevitable concomitant of ­urban life.” I would like to highlight noise and let people experience the chaotic joy of many things producing sound by crashing into one another.
 PROCESS: This was a rare project where I could create anything that I wanted to exist. Still, I did a bit of research on the joyful effects of noise, like this <a href="http://clogic.eserver.org/4-2/smith.html" target="blank">essay on Adorno and Japanese noise musicians</a>. Most of my initial feedback did not enjoy noise for noise's sake, so I tried to find ways to give the sounds more context. <a href="http://vectorsdev.usc.edu/NYCsound/777b.html" target="blank">The Roaring 20s project</a> was a huge influence and I even borrowed sounds from their archive. I also wanted some present-day sounds so I spent a few weeks hunting for New York noises like subway cars closing, sewers bubbling, and the metallic buzzing from final construction on the Oculus structure at the World Trade Center station.
 PROTOTYPE: I was set on using strings because they would reference the streets of Manhattan as well as an instrument. The best looking solution, a stretch sensor, would not work because I wanted streets to be able to have different sounds at intersections with multiple avenues. On my teacher's advice, I tried breaking open the housing of a piezo sensor to make it more sensitive. The thinking was that vibration from a string would activate the sensor if the activation point was nearby. But, the piezo needed a mechanical vibration -- the string needed to touch the sensor to activate it. A classmate suggested I try using light sensors to fake an interaction instead. My preliminary prototype was just holes drilled into the lid of a box that housed my arduino. I taped the light sensors to the underside of the holes and strung rubber bands over the holes on the top of the lid. Finally, I had the plucking interaction I always wanted.
@@ -60,3 +95,13 @@ Crystal Brusch is a graduate student at NYU's Interactive Telecommunications Pro
 One day Crystal will figure out how to attach her mixte and tent to her scooter and go beach-hopping up the east coast. Until then, the MTA will do.
 
 Thanks to AV for this lovely picture of me
+
+
+
+
+
+
+Tiny Projects
+Dull Ideas
+LOST Electronics
+Can't Straighten Up

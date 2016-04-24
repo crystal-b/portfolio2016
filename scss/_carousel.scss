@@ -1,0 +1,30 @@
+@import '../bower_components/foundation-sites/scss/util/mixins';
+@import '../bower_components/foundation-sites/scss/grid/grid';
+@import 'mycolor';
+
+.carousel {
+	padding-bottom: 5rem;
+	.slick-dots {
+		width: 88% !important;
+		padding-bottom: 5rem;
+	}
+	.slick-prev:before, .slick-next:before {
+		color: $black !important;
+	}
+	@include breakpoint(medium) {
+		padding-bottom: 0;
+		.slick-dots {
+			padding-bottom: 0;
+		}
+	}
+}
+.carousel--img {
+	img {
+		padding-top: 2rem;
+	}
+	@include breakpoint(medium) {
+		img {
+			padding-top: 0;
+		}
+	}
+}
