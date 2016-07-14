@@ -5,7 +5,8 @@ $(document).ready(function() {
 	$(window).resize(checkSize);
 
 
-function pathPrepare ($el) {
+	/* playing around with animation */
+	function pathPrepare ($el) {
 		var lineLength = $el[0].getTotalLength();
 		console.log(lineLength);
 		$el.css("stroke-dasharray", lineLength);
@@ -29,16 +30,7 @@ function pathPrepare ($el) {
 					.addTo(controller);
 
 
-
-
-
-
 	var element = $("#tiny-projects").offset().top;
-
-
-
-
-
 
 	$(window).scroll(function(){
 	  var y = $(window).scrollTop();
@@ -158,6 +150,9 @@ function pathPrepare ($el) {
 //     }
 // });
 
+
+
+	/* visual bottom nav */
 	function checkSize() {
 		// console.log($(".next").css("height"));
 		if ($(".next").css("height") == "176px") {
@@ -185,12 +180,20 @@ function pathPrepare ($el) {
 			$("a", this).attr("href", "cookbooks.html");	
 		});
 		$('#noise .next--project-right').each(function() {
+			$(this).css('background-image', 'url(../img/toaster.jpg)');
+			$("a", this).attr("href", "toaster.html");	
+		});
+		$('#toaster .next--project-left').each(function() {
+			$(this).css('background-image', 'url(../img/noise_board.jpg)');
+			$("a", this).attr("href", "noise.html");	
+		});
+		$('#toaster .next--project-right').each(function() {
 			$(this).css('background-image', 'url(../img/clocks_mockup.jpg)');
 			$("a", this).attr("href", "clocks.html");	
 		});
 		$('#clocks .next--project-left').each(function() {
-			$(this).css('background-image', 'url(../img/noise_board.jpg)');
-			$("a", this).attr("href", "noise.html");	
+			$(this).css('background-image', 'url(../img/toaster.jpg)');
+			$("a", this).attr("href", "toaster.html");	
 		});
 		$('#clocks .next--project-right').each(function() {
 			$(this).css('background-image', 'none');
@@ -222,10 +225,16 @@ function pathPrepare ($el) {
 			$("a", this).attr("href", "cookbooks.html");	
 		});
 		$('#noise .next--project-right').each(function() {
-			$("a", this).attr("href", "clocks.html");	
+			$("a", this).attr("href", "toaster.html");	
+		});
+		$('#toaster .next--project-left').each(function() {
+			$("a", this).attr("href", "noise.html");
+		});
+		$('#toaster .next--project-right').each(function() {
+			$("a", this).attr("href", "clocks.html");
 		});
 		$('#clocks .next--project-left').each(function() {
-			$("a", this).attr("href", "cookbooks.html");
+			$("a", this).attr("href", "toaster.html");
 		});
 		$('#clocks .next--project-right').each(function() {
 			$("a", this).attr("href", "tiny-projects.html");
