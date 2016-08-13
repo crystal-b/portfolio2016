@@ -5,40 +5,40 @@ $(document).ready(function() {
 	$(window).resize(checkSize);
 
 
-	/* playing around with animation */
-	function pathPrepare ($el) {
-		var lineLength = $el[0].getTotalLength();
-		console.log(lineLength);
-		$el.css("stroke-dasharray", lineLength);
-		$el.css("stroke-dashoffset", lineLength);
-	}
+	// /* playing around with animation */
+	// function pathPrepare ($el) {
+	// 	var lineLength = $el[0].getTotalLength();
+	// 	console.log(lineLength);
+	// 	$el.css("stroke-dasharray", lineLength);
+	// 	$el.css("stroke-dashoffset", lineLength);
+	// }
 
-	var $trail = $("path#trail");
-	// prepare SVG
-	pathPrepare($trail);
-	// init controller
-	var controller = new ScrollMagic.Controller();
-	// build tween
-	var tween = new TimelineMax()
-		.add(TweenMax.to($trail, 1, {strokeDashoffset: 0, ease:Linear.easeNone})) // draw trail for 1
-		// .add(TweenMax.to("path", 1, {stroke: "#33629c", ease:Linear.easeNone}), 0);			// change color during the whole thing
+	// var $trail = $("path#trail");
+	// // prepare SVG
+	// pathPrepare($trail);
+	// // init controller
+	// var controller = new ScrollMagic.Controller();
+	// // build tween
+	// var tween = new TimelineMax()
+	// 	.add(TweenMax.to($trail, 1, {strokeDashoffset: 0, ease:Linear.easeNone})) // draw trail for 1
+	// 	// .add(TweenMax.to("path", 1, {stroke: "#33629c", ease:Linear.easeNone}), 0);			// change color during the whole thing
 
-	// build scene
-	var scene = new ScrollMagic.Scene({triggerElement: "#trigger1", duration: 4500, tweenChanges: true})
-					.setTween(tween)
-					.addIndicators() // add indicators (requires plugin)
-					.addTo(controller);
+	// // build scene
+	// var scene = new ScrollMagic.Scene({triggerElement: "#trigger1", duration: 4500, tweenChanges: true})
+	// 				.setTween(tween)
+	// 				.addIndicators() // add indicators (requires plugin)
+	// 				.addTo(controller);
 
 
-	var element = $("#tiny-projects").offset().top;
+// 	var element = $("#tiny-projects").offset().top;
 
-	$(window).scroll(function(){
-	  var y = $(window).scrollTop();
-	  console.log(y);
-	    if (y >= element){
-	      // Do stuff, like append a class to an element
-	    }
-	});
+// 	$(window).scroll(function(){
+// 	  var y = $(window).scrollTop();
+// 	  console.log(y);
+// 	    if (y >= element){
+// 	      // Do stuff, like append a class to an element
+// 	    }
+// 	});
 });
 
 	// var getMax = function(){
@@ -153,10 +153,18 @@ $(document).ready(function() {
 
 
 	/* visual bottom nav */
+	var projectsArr = [
+		"cookbooks.html",
+		"noise.html",
+		"toaster.html",
+		"clocks.html",
+		"scents.html",
+		"tiny-projects.html"
+	];
+
+
 	function checkSize() {
-		// console.log($(".next").css("height"));
 		if ($(".next").css("height") == "176px") {
-			// console.log("size checked");
 			next();
 		}
 		else {
@@ -164,52 +172,113 @@ $(document).ready(function() {
 		}
 	}	
 
+	var pArr = [
+		{"id":"#noise", "img":"url(../img/noise_board.jpg", "url":"noise.html"},
+		{"id":"#toaster", "img":"url(../img/toaster.jpg)", "url":"toaster.html"},
+		{"id":"#cookbooks", "img":"url(../img/cooking_book2.jpg)", "url":"cookbooks.html"},
+		{"id":"#clocks", "img":"url(../img/clocks_mockup.jpg)", "url":"clocks.html"},
+		{"id":"#scents", "img":"", "url":"scents.html"},
+		{"id":"#tiny", "url":"tiny-projects.html"}
+	];
 
 	function next() {
-		$('#cookbooks .next--project-left').each(function() {
+		// $('#noise .next--project-left').each(function() {
+		// 	$(this).css('display', 'none');	
+		// });
+		$(pArr[0].id + ' .next--project-left').each(function() {
 			$(this).css('display', 'none');	
 		});
-		$('#cookbooks .next--project-right').each(function() {
+		$(pArr[0].id + ' .next--project-right').each(function() {
 			$(this).parent().removeClass('align-justify');
 			$(this).parent().addClass('align-right');
-			$(this).css('background-image', 'url(../img/noise_board.jpg)');
-			$("a", this).attr("href", "noise.html");	
+			$(this).css('background-image', pArr[1].img);
+			$("a", this).attr("href", pArr[1].url);	
 		});
-		$('#noise .next--project-left').each(function() {
-			$(this).css('background-image', 'url(../img/cooking_book2.jpg)');
-			$("a", this).attr("href", "cookbooks.html");	
+		$(pArr[1].id + ' .next--project-left').each(function() {
+			$(this).css('background-image', pArr[0].img);
+			$("a", this).attr("href", projectsArr[0].url);	
 		});
-		$('#noise .next--project-right').each(function() {
-			$(this).css('background-image', 'url(../img/toaster.jpg)');
-			$("a", this).attr("href", "toaster.html");	
+		$(pArr[1].id + ' .next--project-right').each(function() {
+			$(this).css('background-image', pArr[2].img);
+			$("a", this).attr("href", pArr[2].url);	
 		});
-		$('#toaster .next--project-left').each(function() {
-			$(this).css('background-image', 'url(../img/noise_board.jpg)');
-			$("a", this).attr("href", "noise.html");	
+		$(pArr[2].id + ' .next--project-left').each(function() {
+			$(this).css('background-image', pArr[1].img);
+			$("a", this).attr("href", projectsArr[1].url);	
 		});
-		$('#toaster .next--project-right').each(function() {
-			$(this).css('background-image', 'url(../img/clocks_mockup.jpg)');
-			$("a", this).attr("href", "clocks.html");	
+		$(pArr[2].id + ' .next--project-right').each(function() {
+			$(this).css('background-image', pArr[3].img);
+			$("a", this).attr("href", pArr[3].url);	
 		});
-		$('#clocks .next--project-left').each(function() {
-			$(this).css('background-image', 'url(../img/toaster.jpg)');
-			$("a", this).attr("href", "toaster.html");	
+		/* PENULTIMATE PROJECT */
+		$(pArr[3].id + ' .next--project-left').each(function() {
+			$(this).css('background-image', pArr[2].img);
+			$("a", this).attr("href", projectsArr[2].url);	
 		});
-		$('#clocks .next--project-right').each(function() {
+		$(pArr[3].id + ' .next--project-right').each(function() {
 			$(this).css('background-image', 'none');
 			$(this).addClass('next--right-tiny');
 			$(this).append('<p>Etc</p>');
-			$("a", this).attr("href", "tiny-projects.html");
+			$("a", this).attr("href", pArr[5].url);	
 		});
+		// 	$('#cookbooks .next--project-right').each(function() {
+		// 	$(this).parent().removeClass('align-justify');
+		// 	$(this).parent().addClass('align-right');
+		// 	$(this).css('background-image', 'url(../img/noise_board.jpg)');
+		// 	$("a", this).attr("href", projectsArr[1]);	
+		// });
+		// $("'" + pArr[0].id + " .next--project-left'").each(function() {
+		// 	$(this).css('display', 'none');	
+		// });
+		// $('#cookbooks .next--project-right').each(function() {
+		// 	$(this).parent().removeClass('align-justify');
+		// 	$(this).parent().addClass('align-right');
+		// 	$(this).css('background-image', 'url(../img/noise_board.jpg)');
+		// 	$("a", this).attr("href", projectsArr[1]);	
+		// });
+		// $('#noise .next--project-left').each(function() {
+		// 	$(this).css('background-image', 'url(../img/cooking_book2.jpg)');
+		// 	$('a', this).attr('href', projectsArr[0]);	
+		// });
+		// $('#noise .next--project-right').each(function() {
+		// 	$(this).css('background-image', 'url(../img/toaster.jpg)');
+		// 	$("a", this).attr("href", projectsArr[2]);	
+		// });
+		// $('#toaster .next--project-left').each(function() {
+		// 	$(this).css('background-image', 'url(../img/noise_board.jpg)');
+		// 	$("a", this).attr("href", projectsArr[1]);	
+		// });
+		// $('#toaster .next--project-right').each(function() {
+		// 	$(this).css('background-image', 'url(../img/clocks_mockup.jpg)');
+		// 	$("a", this).attr("href", projectsArr[3]);	
+		// });
+		// $('#clocks .next--project-left').each(function() {
+		// 	$(this).css('background-image', 'url(../img/toaster.jpg)');
+		// 	$("a", this).attr("href", projectsArr[2]);	
+		// });
+		// $('#clocks .next--project-right').each(function() {
+		// 	$(this).css('background-image', 'none');
+		// 	$(this).addClass('next--right-tiny');
+		// 	$(this).append('<p>Etc</p>');
+		// 	$("a", this).attr("href", projectsArr[4]);
+		// });
 		$('#tiny-projects .next--project-left').each(function() {
 			$(this).parent().removeClass('align-justify');
 			$(this).css('background-image', 'url(../img/clocks_mockup.jpg)');
-			$("a", this).attr("href", "clocks.html");	
+			$("a", this).attr("href", projectsArr[3]);	
 		});
 		$('#tiny-projects .next--project-right').each(function() {
 			$(this).css('display', 'none');	
 		});
-		// console.log("added background image");
+		$('#tiny-project .next--project-left').each(function() {
+			$(this).parent().removeClass('align-justify');
+			$(this).css('background-image', 'none');
+			$(this).addClass('next--right-tiny');
+			$(this).append('<p>Etc</p>');
+		});
+		$('#tiny-project .next--project-right').each(function() {
+			$(this).css('display', 'none');	
+		});
 	}
 
 	function nextMini() {
